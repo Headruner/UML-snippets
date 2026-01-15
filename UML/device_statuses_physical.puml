@@ -1,0 +1,25 @@
+@startuml
+scale 850 width
+state Detected {
+  Detected: Device has USB PID of the supported device
+  [*] --> Disconnected
+  Disconnected: SN is known
+  Disconnected --> Connected : Plug USB
+  Connected --> Disconnected : Unplug USB
+}
+
+state Connected {
+  Connected --> ActiveSession : Session activated \nin QLink
+  ActiveSession : Fully operating device
+  ActiveSession : Limited operating device when daisy-chained
+  Connected : Device is detected as a valid USB device via QLink
+  Connected --> InactiveSession : Session not \nactivated in QLink
+  InactiveSession : Prompt to activate session
+  InactiveSession : Prompt to turn off other applications
+  Connected --> Bootloader : Device is in \nBootloader while \nthe FW updated
+  Bootloader : Prompt to restart FW update
+  Connected --> Error : Device reported \nen error
+  Error : Prompt to reset to Default
+  Error : Prompt to contact support
+}
+@enduml

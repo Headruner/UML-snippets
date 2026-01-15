@@ -1,0 +1,20 @@
+@startuml
+left to right direction 
+
+package middleware{
+    database database
+    [Mechanical] -left-> database
+}
+
+package target{
+    Mechanical )-- [Turning Disc]   
+}
+
+package sources{
+    [Engine] -- Mechanical
+    [Hydraulics] -- Mechanical
+}
+
+middleware -[hidden]- target
+sources -[hidden]- middleware
+@enduml
