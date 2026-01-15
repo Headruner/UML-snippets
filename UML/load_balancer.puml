@@ -1,0 +1,22 @@
+@startuml
+skinparam backgroundcolor transparent
+
+rectangle client as "browser / mobil"
+component third_party as "third party"
+component internal_api_1 as "internal-api-1"
+hexagon dns
+component aws_lb as "aws load balancer"
+component web1
+component web2
+component internal_api_2 as "internal-api-2"
+component internal_api_3 as "internal-api-3"
+
+client -- dns
+internal_api_1 -- dns
+third_party -- dns
+dns -- aws_lb
+aws_lb -- web1
+aws_lb -- web2
+aws_lb -- internal_api_2
+aws_lb -- internal_api_3
+@enduml
