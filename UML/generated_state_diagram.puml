@@ -1,0 +1,44 @@
+@startuml 
+
+title **Device State Machine**
+
+[*] --> Disconnected : power on/reset
+
+state "Disconnected" as disconnected {
+    [*] --> disconnected : initial state
+    disconnected --> Connected : connection established
+}
+
+state "Connected" as connected {
+    [*] --> Normal : initial connection state
+    state "Normal" as normal {
+        [*] --> normal : enter from Disconnected
+        normal --> Limited : resource constrained/performance drop
+        normal --> Error : device error occurs
+        normal --> FW_Update : firmware update starts
+        normal --> disconnected : disconnection initiated
+    }
+
+    state "Limited" as limited {
+        [*] --> limited : triggered from Normal
+        limited --> Normal : resources available
+        limited --> Error : additional error occurs
+        limited --> disconnected : disconnection initiated
+    }
+
+    state "Error" as error {
+        [*] --> error : triggered from any connected state
+        error --> Normal : error recovered
+        error --> FW_Update : firmware update starts after error
+        error --> disconnected : manual reset required/timeout
+    }
+
+    state "FW Update" as fw_update {
+        [*] --> fw_update : triggered from Normal/Error/Limited
+        fw_update --> Normal : update successful
+        fw_update --> Error : update failure
+        fw_update --> disconnected : manual interruption
+    }
+}
+
+@enduml

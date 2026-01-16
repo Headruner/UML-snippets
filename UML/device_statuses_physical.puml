@@ -34,5 +34,7 @@ state Connected {
   SoftError : Prompt to reset to Default
   DeviceError --> HardError
   HardError : Prompt to contact support
+  ActiveSession --> InactiveSession : Other application\ntook control
+  ActiveSession <-- InactiveSession : Current application\ntook control 
 }
 @enduml
