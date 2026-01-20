@@ -1,0 +1,47 @@
+@startuml
+top to bottom direction
+
+actor "End‑User (Mobile User)" as User
+actor "Third‑Party KYC Service" as KYC_Svc
+actor "Bank Back-Office" as Bank_BO
+
+package "User personal data" as USER {
+    usecase "Populate necessary info" as StartReg
+}
+
+package "KYC processes" as KYC {
+    usecase "Invoke KYC Service" as InvokeKYC
+}
+package "Bank‑Specific" as BANK {
+    usecase "Create Account Record" as CreateAcc
+    usecase "Assign User‑ID" as AssignID
+    usecase "Inform user about KYC results" as KYC_Inform
+    usecase "Process duplicates" as KYC_Dups
+}
+
+User --> StartReg : Fill form
+StartReg  --> InvokeKYC : <<include>>
+InvokeKYC --> KYC_Svc : <<perform>>
+InvokeKYC --> KYC_Inform : <<extend>>
+InvokeKYC --> CreateAcc : <<include>>
+InvokeKYC --> AssignID : <<include>>
+AssignID  --> Bank_BO : <<perform>>
+CreateAcc --> Bank_BO : <<perform>>
+KYC_Inform   --> Bank_BO : <<perform>>
+KYC_Dups --> Bank_BO : <<perform>>
+
+'Additional notes
+note left of StartReg
+  • The mobile app **does not collect or store** any personal data.  
+  • All documents / personal identifiers are forwarded **only** to the third‑party KYC service.
+end note
+
+note right of InvokeKYC
+  • The KYC service validates identity using its own secure pipeline.
+end note
+
+note top of KYC_Inform
+  • Bank informs the user about the verification outcome (success / failure).
+end note
+
+@enduml

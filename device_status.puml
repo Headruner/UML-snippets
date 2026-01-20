@@ -1,0 +1,37 @@
+@startuml
+
+  [*] --> Detected
+
+state Detected {
+  Detected: Device has USB PID of the supported device
+  Disconnected: SN is known
+  Detected --> Connected : Plug USB
+  Connected --> Disconnected : Unplug USB
+  Detected --> Bootloader
+  Bootloader : Device is in Bootloader while the FW updated
+  Bootloader --> FW_stuck
+  Bootloader --> HardError
+  HardError : Prompt to contact support
+  DeviceError --> SoftError
+  DeviceError : Device reported internal error
+  SoftError : Prompt to reset to Default
+}
+
+state Connected {
+  Connected --> ActiveSession : Session activated \nin QLink
+  ActiveSession --> Normal
+  ActiveSession : Device has valid active session via QLink
+  Normal : Fully operating device
+  ActiveSession --> Limited
+  Limited: Limited operating device when daisy-chained
+  Connected : Device is detected as a valid USB device via QLink
+  Connected --> InactiveSession
+  InactiveSession : Session not activated in QLink
+  InactiveSession --> Reactivate
+  Reactivate :Prompt to activate session
+  InactiveSession --> KillOtherApp
+  KillOtherApp : Prompt to turn off other applications
+  FW_stuck : Prompt to restart FW update
+  Connected --> DeviceError : Device reported \nan error
+}
+@enduml
