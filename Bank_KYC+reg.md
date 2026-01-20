@@ -1,6 +1,6 @@
-US#1 - Mobile registration of the new user
-As a New User, I want to register in mobile application so then I can use it for getting Bank services anywhere.
-Acceptance criteria
+# US#1 - Mobile registration of the new user
+## As a New User, I want to register in mobile application so then I can use it for getting Bank services anywhere.
+## Acceptance criteria
 1. The application must be installed with all necessary permission for it requested.
 2. Initial checks
     1. the application was re-installed and any local files should be ignored if last action on the server side was uninstall (to avoid fraud).
@@ -36,10 +36,9 @@ Acceptance criteria
     2. If the KYC provider returns an unrecoverable error, the app must navigate the user back to the registration wizard with a clear error description.
 
 
-US#2 - KYC invoke  process inside the mobile app
-As the banking platform, I need to embed the third‑party KYC verification flow inside the mobile app and persist the user’s progress so that the user can complete identity verification without leaving the app or re‑entering data.
-
-Acceptance criteria
+# US#2 - KYC invoke  process inside the mobile app
+## As the banking platform, I need to embed the third‑party KYC verification flow inside the mobile app and persist the user’s progress so that the user can complete identity verification without leaving the app or re‑entering data.
+## Acceptance criteria
 1. The system must be able to invoke a KYC process as a third-party web-application inside the banking application for smooth experience.
 2. The system must memorize current progress to support disconnected sessions (when user is distracted and returns back to the app later).
 3. The system must provide a secured connection inside the app so then all data cannot be intercepted.
