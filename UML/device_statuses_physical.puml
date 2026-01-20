@@ -7,6 +7,14 @@ state Detected {
   Disconnected: SN is known
   Detected --> Connected : Plug USB
   Connected --> Disconnected : Unplug USB
+  Detected --> Bootloader
+  Bootloader : Device is in Bootloader while the FW updated
+  Bootloader --> FW_stuck
+  Bootloader --> HardError
+  HardError : Prompt to contact support
+  DeviceError --> SoftError
+  DeviceError : Device reported internal error
+  SoftError : Prompt to reset to Default
 }
 
 state Connected {
@@ -23,18 +31,7 @@ state Connected {
   Reactivate :Prompt to activate session
   InactiveSession --> KillOtherApp
   KillOtherApp : Prompt to turn off other applications
-  Connected --> Bootloader
-  Bootloader : Device is in Bootloader while the FW updated
-  Bootloader --> FW_stuck
-  Bootloader --> HardError
   FW_stuck : Prompt to restart FW update
-  Connected --> DeviceError : Device reported \nen error
-  DeviceError --> SoftError
-  DeviceError : Device reported internal error
-  SoftError : Prompt to reset to Default
-  DeviceError --> HardError
-  HardError : Prompt to contact support
-  ActiveSession --> InactiveSession : Other application\ntook control
-  ActiveSession <-- InactiveSession : Current application\ntook control 
+  Connected --> DeviceError : Device reported \nan error
 }
 @enduml

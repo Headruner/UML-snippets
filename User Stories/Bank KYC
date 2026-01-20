@@ -1,0 +1,25 @@
+US#1 - Mobile registration of the new user
+As a New User, I want to register in mobile application so then I can use it for getting Bank services anywhere.
+Acceptance criteria
+1. The system must check if 
+2. On the application launch, The system must check if 
+    1. the application was re-installed and any local files should be ignored if last action on the server side was uninstall (to avoid fraud).
+    2. minimum requirements are met (hardware and software) on the app launch.
+    3. major update of the application is available on the app launch and block further actions until app is updated.
+    4. necessary permissions are granted (internet, A-GPS, notifications) and prompt to provide such permissions if not enabled. Notifications are not strictly required, other requirements are.
+    5. local files include valid access token and bypass registration steps in the such a case.
+3. When launch checks pass and no active user is found, the system must prompt a registration screen.
+4. The User must be able navigate between registration screen, see the current step of the progress and be able to update information before application.
+5. The system must use 'secondary' communication channels to verify user's e-mail and phone number with one-time passwords.
+    1. password TTL is 5 minutes
+    2. password must be unique and hard to guess but easy to use (6 digits)
+    3. the system must block further steps (KYC) before e-mail and phone number are verified
+
+US#2 - KYC invoke  process inside the mobile app
+As a System, I want user to pass a KYC process in the third-party service so then it will be easier and more convenient.
+
+Acceptance criteria
+1. The system must be able to invoke a KYC process as a third-party web-application inside the banking application for smooth experience.
+2. The system must memorize current progress to support disconnected sessions (when user is distracted and returns back to the app later).
+3. The system must provide a secured connection inside the app so then all data cannot be intercepted.
+4. The system must process KYC results asynchronous and deliver e-mail/SMS to the user with results as a short link to continue registration or use of the application.
