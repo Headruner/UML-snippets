@@ -1,0 +1,53 @@
+@startuml DeviceFirmwareUpdateSequenceDiagram
+
+actor User
+participant "Desktop App" as App
+participant "Device Controller" as Controller  # Hidden from UI, manages connected devices
+participant "AIO Cooler" as AIO
+participant "Case Fan" as CaseFan
+participant "Keyboard" as Keyboard
+participant "Cloud FW Server" as FWServer
+
+== Device Power-Up ==
+User -> App : Launch Application
+App -> Controller : Query Connected Devices
+Controller --> App : [DeviceList: {AIO, CaseFan_1, CaseFan_2, Keyboard}]
+
+== Firmware Update Flow ==
+App -> AIO : Check Current FW Version
+AIO --> App : Returns V1.0.5
+note right of App : **Firmware outdated**
+App -> Controller : Initiate FW Update for {AIO}
+Controller -> FWServer : Request Latest FW (V2.0.0)
+FWServer --> Controller : Firmware Package
+
+== Case 1: Successful Update ==
+Controller -> AIO : Apply FW (V2.0.0)
+AIO -> Controller : Confirm Update Success
+Controller --> App : Device Status = "Online & Updated"
+App --> User : Show Toast: *"Firmware updated for AIO"*
+
+== Case 2: Failed Update ==
+Controller -> CaseFan_1 : Apply FW (V2.0.0)
+CaseFan_1 -> Controller : Error - "Update Incomplete"
+note right of Controller : **Device in Intermediate State**
+Controller --> App : Device Status = "FW Update Failed"
+
+App -> User : Show Warning: *"Case Fan 1 needs manual reset"*
+User -> CaseFan_1 : Reset Manually
+
+== Case 3: Controller FW Failure ==
+App -> Controller : Check Controller Health
+Controller --> App : Error - "Controller Firmware Corrupt"
+note right of App : **Controller Hidden from UI**
+App -> User : Show Debug Log Only:
+*"Controller firmware error. Devices may behave unexpectedly."*
+User -> Controller : Restart via System Tray
+
+== Case 4: Device Power-Up Check ==
+AIO -> Controller : Bootup Handshake
+Controller --> AIO : Authorize
+AIO -> App : Register Status = "Online"
+note right of App : **Device visible in UI if healthy**
+
+@enduml

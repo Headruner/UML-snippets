@@ -55,3 +55,19 @@
 14. The KYC web view must load (i.e., receive the first HTML response) within 3 seconds on a 3G connection for 95 % of sessions under normal load.
 Auditability
 15. ll KYC‑related API calls must be logged with a correlation ID that can be traced back to the stored session token for forensic review.
+
+
+#UseCase #1 - Mobile app registration (no KYC)
+
+| **Given**                                                                 | **When**                                                                                     | **Then**                                                                                     |
+|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| User opens the app and is directed to registration (no session).         | System loads an empty registration form with fields: Name, Email, Phone.                    | Form renders with validation rules (e.g., email format, phone length).                        |
+|                                                                           | User starts typing in a required field (e.g., Name).                                        | Field validates input in real-time (e.g., letters only for Name).                              |
+|                                                                           | User submits the form with **valid** data.                                                  | System sends data to backend; proceeds to OTP verification or next step.                   |
+|                                                                           | **Error**: Empty required field (e.g., Email).                                               | Form highlights the empty field and shows *"This is required."*                              |
+|                                                                           | **Error**: Invalid email format (e.g., `userexample.com`).                                   | Field turns red; error tooltip: *"Please enter a valid email (user@example.com)."*         |
+| User submits the form with **invalid** phone number (e.g., 9 digits).     | System validates phone length against rules (≥10 digits).                                     | Error displayed under field: *"Phone must be 10 digits."*                                    |
+|                                                                           | User ignores validation errors and submits again.                                           | Same errors persist; no progress to next step.                                              |
+| **Alternative**: User accidentally closes the app mid-registration.       | System detects unsaved data (if cached locally).                                            | On reopening, pre-fill form with saved inputs (if available).                               |
+| **Error**: Device has **no internet connection**.                          | User attempts to submit the form offline.                                                  | Local cache stores inputs; sync button appears for later submission.                        |
+|                                                                           | **Backend error** (e.g., server timeout) after submission.                                  | Show: *"Failed to save data. Please try again."* + Retry button.                           |
