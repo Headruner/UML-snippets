@@ -1,0 +1,101 @@
+@startuml Device_Validation_Activity_Diagram
+
+skinparam activity {
+    BackgroundColor #f0f8ff
+    BorderColor #4682b4
+    ArrowColor #333333
+    FontName Arial
+    FontSize 12
+}
+
+' Define participants (optional for clarity)
+note right of here: <<Device Validation Flow>>\nAll devices connected via USB\nSoftware protocol: Custom I2C/USB HID
+:Initialize Device Manager;
+
+fork
+    :Check Physical Connection (USB)\n→ All Devices;
+    
+    fork
+        :AIO Cooler → Check USB Presence;
+        :Air Cooler → Check USB Presence;
+        :Case Fan → Check USB Presence;
+        :Mouse with Dongle → Check USB Presence;
+        :Keyboard → Check USB Presence;
+        :PSU → Check USB Presence (if supported);
+        :Small Controller → Check USB Presence;
+
+    join
+
+    :Validate Software Protocol\n(Handshake, Version Query);
+
+    fork
+        :AIO Cooler → Validate I2C/USB HID Protocol;
+        :Air Cooler → Validate Custom Protocol;
+        :Case Fan → Validate PWM/USB Command Set;
+        :Mouse with Dongle → Validate HID Report Descriptors;
+        :Keyboard → Validate HID Keyboard Layout;
+        :PSU → Validate Power Management Protocol;
+        :Small Controller → Validate Control Bus Protocol;
+
+    join
+
+    :Device-Specific Validation;
+
+    fork
+        :AIO Cooler → Verify Pump RPM & Temp Sensors;
+        :Air Cooler → Check Fan Speed Calibration;
+        :Case Fan → Confirm PWM Response;
+        :Mouse with Dongle → Test Movement & Button Input;
+        :Keyboard → Test Key Presses (QWERTY);
+        :PSU → Validate Voltage Output Reports;
+        :Small Controller → Verify Device Mapping Table;
+
+    join
+
+    :Check for Firmware Update Status;
+
+    fork
+        :AIO Cooler → Query FW Version & Update Flag;
+        :Air Cooler → Query FW Version & Update Flag;
+        :Case Fan → Query FW Version & Update Flag;
+        :Mouse with Dongle → Query FW Version & Update Flag;
+        :Keyboard → Query FW Version & Update Flag;
+        :PSU → Query FW Version & Update Flag;
+
+    join
+
+    :Handle Controller State (Hidden from UI);
+
+    if (Small Controller in Bootloader?) then (yes)
+        :Mark All Dependent Devices as "Update Pending";
+        note right of here: <<Controller update in progress>>\n<<UI shows devices normally with tooltip>>
+    else (no)
+        :Check Controller FW Version;
+        if (Controller FW Outdated?) then (yes)
+            :Notify System of Update Available;
+            note right of here: <<Silent notification to user>>\n<<No UI change for controller>>
+        else (no)
+            :Controller Normal Operation;
+        endif
+    endif
+
+    :Determine Final UI State;
+
+    if (All Devices Validated?) then (yes)
+        :Render Normal Operation View;\nShow all devices with status icons;
+        note right of here: <<Green checkmarks, version numbers>>
+    else (no)
+        :Identify Failed Devices;
+        fork
+            :Device Disconnected → Show "Not Connected";
+            :Protocol Error → Show "Communication Failure";
+            :FW Update Pending → Show "Update Available" icon;
+            :Bootloader Mode → Show "Updating..." tooltip;
+        join
+
+        :Render Warning View;\nHighlight problematic devices;
+    endif
+
+end fork
+
+stop
