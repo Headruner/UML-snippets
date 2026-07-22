@@ -1,0 +1,902 @@
+[
+ {
+  "id": "219808094",
+  "title": "Listan / Developex - IO Center Desktop"
+ },
+ {
+  "id": "219808115",
+  "title": "Vorlage: Projektplan"
+ },
+ {
+  "id": "219808130",
+  "title": "Vorlage: Entscheidungsdokumentation"
+ },
+ {
+  "id": "219808145",
+  "title": "Vorlage: Besprechungsnotizen"
+ },
+ {
+  "id": "249332257",
+  "title": "LS. Lighting Studio screen"
+ },
+ {
+  "id": "249332288",
+  "title": "Emails with initial requirements and clarifications"
+ },
+ {
+  "id": "249332312",
+  "title": "IO3 Design Questions"
+ },
+ {
+  "id": "249397759",
+  "title": "CS. Cooling Studio screen"
+ },
+ {
+  "id": "249430603",
+  "title": "The first initial requirements\u00a0"
+ },
+ {
+  "id": "249430622",
+  "title": "Clarification of the first initial requirements"
+ },
+ {
+  "id": "249430645",
+  "title": "IO3 Protocol Clarifications"
+ },
+ {
+  "id": "251920397",
+  "title": "WBS"
+ },
+ {
+  "id": "251920414",
+  "title": "IO3 Spec Questions"
+ },
+ {
+  "id": "251953168",
+  "title": "HM/Dashboard"
+ },
+ {
+  "id": "251953203",
+  "title": "Updates to Initial requirements before Kick off of the Phase 3"
+ },
+ {
+  "id": "253067265",
+  "title": "CS. View Cooling Studio screen"
+ },
+ {
+  "id": "258211841",
+  "title": "HM/Dashboard View"
+ },
+ {
+  "id": "277413890",
+  "title": "HM/Dashboard Edit"
+ },
+ {
+  "id": "293076994",
+  "title": "CS. Edit Curve Settings"
+ },
+ {
+  "id": "293404673",
+  "title": "CS. Edit Fan Settings"
+ },
+ {
+  "id": "294420482",
+  "title": "LS. View Lighting Studio screen"
+ },
+ {
+  "id": "306872321",
+  "title": "Product Settings"
+ },
+ {
+  "id": "306872336",
+  "title": "Product Settings: View Product Settings for PSU1 (Dark Power Pro 14"
+ },
+ {
+  "id": "306872360",
+  "title": "Product Settings: Firmware Update"
+ },
+ {
+  "id": "306872386",
+  "title": "Product Settings: View Product Settings for Small Controller"
+ },
+ {
+  "id": "325156874",
+  "title": "HRM (draft)"
+ },
+ {
+  "id": "325681191",
+  "title": "Error Handling. User Stories and Use Cases"
+ },
+ {
+  "id": "325746734",
+  "title": "Edit Mode. User Stories and Use Cases"
+ },
+ {
+  "id": "325812245",
+  "title": "View State. User Stories and Use Cases"
+ },
+ {
+  "id": "331644948",
+  "title": "Project W1 (LIGHT LOOP IO LCD)"
+ },
+ {
+  "id": "331743236",
+  "title": "Small Controller"
+ },
+ {
+  "id": "336232466",
+  "title": "Listan/SW Questions"
+ },
+ {
+  "id": "340983857",
+  "title": "HM. Investigation CPUID vs LibreHWMonitor"
+ },
+ {
+  "id": "365199405",
+  "title": "Gigabyte"
+ },
+ {
+  "id": "365232236",
+  "title": "MSI"
+ },
+ {
+  "id": "365264957",
+  "title": "Giphy"
+ },
+ {
+  "id": "365527052",
+  "title": "Asus"
+ },
+ {
+  "id": "365559920",
+  "title": "CPUID"
+ },
+ {
+  "id": "365625354",
+  "title": "ASRock"
+ },
+ {
+  "id": "386236417",
+  "title": "Q-Link protocol IDs"
+ },
+ {
+  "id": "387481641",
+  "title": "Illumination"
+ },
+ {
+  "id": "387481657",
+  "title": "Product Settings LIGHT LOOP IO LCD"
+ },
+ {
+  "id": "387940391",
+  "title": "Version History"
+ },
+ {
+  "id": "387940417",
+  "title": "Home Screen LIGHT LOOP IO LCD"
+ },
+ {
+  "id": "388268088",
+  "title": "Glossary"
+ },
+ {
+  "id": "388268097",
+  "title": "Screen Setup"
+ },
+ {
+  "id": "390037508",
+  "title": "Supported MIDs"
+ },
+ {
+  "id": "390103046",
+  "title": "List of supported lighting effects"
+ },
+ {
+  "id": "390103067",
+  "title": "Lighting effect settings"
+ },
+ {
+  "id": "390103110",
+  "title": "Color Settings"
+ },
+ {
+  "id": "390168584",
+  "title": "Brightness"
+ },
+ {
+  "id": "390234120",
+  "title": "Custom LEDs configuration"
+ },
+ {
+  "id": "391479349",
+  "title": "Screen background effects"
+ },
+ {
+  "id": "391577628",
+  "title": "Screen overlay values"
+ },
+ {
+  "id": "391774237",
+  "title": "Screen presets"
+ },
+ {
+  "id": "397377581",
+  "title": "Direction"
+ },
+ {
+  "id": "397508623",
+  "title": "Speed"
+ },
+ {
+  "id": "398983234",
+  "title": "Screen Brightness Settings"
+ },
+ {
+  "id": "402718766",
+  "title": "Image"
+ },
+ {
+  "id": "402718802",
+  "title": "Video"
+ },
+ {
+  "id": "403013639",
+  "title": "Static"
+ },
+ {
+  "id": "403472385",
+  "title": "Video & GIF"
+ },
+ {
+  "id": "404324382",
+  "title": "Sensor"
+ },
+ {
+  "id": "404422686",
+  "title": "Dynamic"
+ },
+ {
+  "id": "417300552",
+  "title": "Text"
+ },
+ {
+  "id": "417398798",
+  "title": "2 Sensors"
+ },
+ {
+  "id": "418250761",
+  "title": "Persona 0-5"
+ },
+ {
+  "id": "419233877",
+  "title": "Clock"
+ },
+ {
+  "id": "419954831",
+  "title": "Media Playback"
+ },
+ {
+  "id": "420937762",
+  "title": "Audio Visualizer"
+ },
+ {
+  "id": "423985169",
+  "title": "Fallback mode"
+ },
+ {
+  "id": "424345613",
+  "title": "Upload Video/GIF to LCD"
+ },
+ {
+  "id": "425623561",
+  "title": "SC. IO Controller"
+ },
+ {
+  "id": "427196424",
+  "title": "GROUP tabs W1"
+ },
+ {
+  "id": "429752360",
+  "title": "Cooling Studio"
+ },
+ {
+  "id": "433651721",
+  "title": "A1 Dark Rock Pro 6 IO LCD"
+ },
+ {
+  "id": "433782790",
+  "title": "Light Wings Pro IO (F1)"
+ },
+ {
+  "id": "434372620",
+  "title": "General mice functional requirements"
+ },
+ {
+  "id": "435191838",
+  "title": "Dark Power PRO 13 (1300 and 1600)"
+ },
+ {
+  "id": "437354497",
+  "title": "CS. Groups"
+ },
+ {
+  "id": "441745448",
+  "title": "Lighting Studio"
+ },
+ {
+  "id": "442171448",
+  "title": "Dynamic Lighting"
+ },
+ {
+  "id": "445481008",
+  "title": "Meeting notes in space"
+ },
+ {
+  "id": "445710348",
+  "title": "2025-08-01 Meeting Notes"
+ },
+ {
+  "id": "446234626",
+  "title": "CS. Default configurations"
+ },
+ {
+  "id": "449839114",
+  "title": "CS. Panels and configurations"
+ },
+ {
+  "id": "453148674",
+  "title": "Limited screen operation mode"
+ },
+ {
+  "id": "453607438",
+  "title": "2025-08-11 Meeting notes"
+ },
+ {
+  "id": "453967883",
+  "title": "Cooling settings"
+ },
+ {
+  "id": "454131723",
+  "title": "IO Lightning studio"
+ },
+ {
+  "id": "457637890",
+  "title": "Detection of devices"
+ },
+ {
+  "id": "457768961",
+  "title": "Navigation pannel"
+ },
+ {
+  "id": "457867270",
+  "title": "Stakeholders matrix"
+ },
+ {
+  "id": "460521475",
+  "title": "2025-08-18 Meeting notes"
+ },
+ {
+  "id": "461635588",
+  "title": "Patch notes of the FW and SW"
+ },
+ {
+  "id": "462553104",
+  "title": "Features list"
+ },
+ {
+  "id": "462782473",
+  "title": "Project Input Documentation"
+ },
+ {
+  "id": "463339550",
+  "title": "Design feedback"
+ },
+ {
+  "id": "463667289",
+  "title": "App window behavior"
+ },
+ {
+  "id": "463929386",
+  "title": "CPUID SDK service"
+ },
+ {
+  "id": "463929401",
+  "title": "Models and features"
+ },
+ {
+  "id": "463994882",
+  "title": "Installator"
+ },
+ {
+  "id": "464551941",
+  "title": "BC. IO Controller PRO"
+ },
+ {
+  "id": "465829905",
+  "title": "2025-08-22 Meeting notes"
+ },
+ {
+  "id": "468320266",
+  "title": "2025-08-26 Meeting notes"
+ },
+ {
+  "id": "471400449",
+  "title": "Dark Perk Sym & Ergo"
+ },
+ {
+  "id": "473628692",
+  "title": "2025-09-02 Meeting notes"
+ },
+ {
+  "id": "489717802",
+  "title": "Profiles"
+ },
+ {
+  "id": "489717811",
+  "title": "Settings"
+ },
+ {
+  "id": "489717848",
+  "title": "Project 149. Light Mount"
+ },
+ {
+  "id": "489750560",
+  "title": "Home Screen"
+ },
+ {
+  "id": "490307592",
+  "title": "Notifications"
+ },
+ {
+  "id": "492470354",
+  "title": "Production test tool. W1"
+ },
+ {
+  "id": "493223970",
+  "title": "2025-09-19 Meeting notes"
+ },
+ {
+  "id": "496992489",
+  "title": "2025-09-24 Meeting notes"
+ },
+ {
+  "id": "497582124",
+  "title": "QLink Protocol: Session Management"
+ },
+ {
+  "id": "497680388",
+  "title": "Milestones. Timeline"
+ },
+ {
+  "id": "498827265",
+  "title": "Image October"
+ },
+ {
+  "id": "498827292",
+  "title": "Video October"
+ },
+ {
+  "id": "498892801",
+  "title": "GIF October"
+ },
+ {
+  "id": "503906333",
+  "title": "Logger"
+ },
+ {
+  "id": "504365061",
+  "title": "Devices emulator"
+ },
+ {
+  "id": "504397837",
+  "title": "Project 2.0. Dark Mount"
+ },
+ {
+  "id": "516849672",
+  "title": "K3. Light Mount TKL"
+ },
+ {
+  "id": "517177356",
+  "title": "Feedback for 0.303-305"
+ },
+ {
+  "id": "518127634",
+  "title": "F1 WebHID SRD - Light Wings Pro IO"
+ },
+ {
+  "id": "518127664",
+  "title": "W1 & SC Test Tool"
+ },
+ {
+  "id": "518160434",
+  "title": "A1 WebHID SRD - Dark Rock Pro 6 IO LCD"
+ },
+ {
+  "id": "518324294",
+  "title": "P1 Desktop SRD - Dark Power Pro 14"
+ },
+ {
+  "id": "518357056",
+  "title": "Light Mount TKL - FW Spec (FRD)"
+ },
+ {
+  "id": "518488086",
+  "title": "W1 Desktop SRD - Light Loop IO LCD"
+ },
+ {
+  "id": "518520842",
+  "title": "W1 WebHID SRD - Light Loop IO LCD"
+ },
+ {
+  "id": "518520882",
+  "title": "F1 Desktop SRD - Light Wings Pro IO"
+ },
+ {
+  "id": "518553612",
+  "title": "A1 Desktop SRD - Dark Rock Pro 6 IO LCD"
+ },
+ {
+  "id": "518750211",
+  "title": "Sensor labels for screen overlay setup (W1, A1, F1, W2, P1)"
+ },
+ {
+  "id": "518783022",
+  "title": "K3 Desktop & WebHID SRD - Light Mount TKL"
+ },
+ {
+  "id": "519569409",
+  "title": "P1 WebHID SRD - Dark Power Pro 14"
+ },
+ {
+  "id": "519864321",
+  "title": "W2.2 Desktop & WebHID SRD - Dark Loop FX IO LCD"
+ },
+ {
+  "id": "526417929",
+  "title": "Keyboards"
+ },
+ {
+  "id": "536412198",
+  "title": "PID mode explanation for SC/W1"
+ },
+ {
+  "id": "536870937",
+  "title": "Errors and notifications LIGHT LOOP IO LCD"
+ },
+ {
+  "id": "537395216",
+  "title": "2025-10-21 Meeting notes"
+ },
+ {
+  "id": "538574851",
+  "title": "F1 Testing Tool SRD"
+ },
+ {
+  "id": "538673170",
+  "title": "A1 Testing Tool SRD"
+ },
+ {
+  "id": "541687821",
+  "title": "User guide. Light Loop IO LCD and Small Controller"
+ },
+ {
+  "id": "551518215",
+  "title": "Default curves for devices"
+ },
+ {
+  "id": "565149698",
+  "title": "PLUG-SignalRGB Permissions API Documentation-260924-003028"
+ },
+ {
+  "id": "584548375",
+  "title": "Feedback for 0.306"
+ },
+ {
+  "id": "590217227",
+  "title": "Bindings"
+ },
+ {
+  "id": "592085011",
+  "title": "Cooling modes"
+ },
+ {
+  "id": "603062273",
+  "title": "Dark Power PRO 13 (1300 and 1600) WEB"
+ },
+ {
+  "id": "623968257",
+  "title": "Weekly updates"
+ },
+ {
+  "id": "637730822",
+  "title": "Light Perk - FW Spec (FRD)"
+ },
+ {
+  "id": "638189592",
+  "title": "Light Wings Pro IO - FW Spec (FRD)"
+ },
+ {
+  "id": "638713858",
+  "title": "W1. Light Loop PRO IO LCD. Web"
+ },
+ {
+  "id": "640614413",
+  "title": "Dark Rock Pro 6 IO LCD - FW Spec (FRD)"
+ },
+ {
+  "id": "642088961",
+  "title": "Feedback for 0.307"
+ },
+ {
+  "id": "674922497",
+  "title": "Feedback for 0.308"
+ },
+ {
+  "id": "681213955",
+  "title": "Tutorials"
+ },
+ {
+  "id": "701431815",
+  "title": "K3. Light Mount TKL. Web"
+ },
+ {
+  "id": "712179713",
+  "title": "Video Codecs used in IO Center web-app (ffmpeg Documentation)"
+ },
+ {
+  "id": "713424904",
+  "title": "M3 Desktop & WebHID SRD - Light Perk"
+ },
+ {
+  "id": "738361346",
+  "title": "Feedback for GPU Render PoC"
+ },
+ {
+  "id": "751730705",
+  "title": "Devices States for the IO Center UI"
+ },
+ {
+  "id": "758448129",
+  "title": "Light Perk (M3)"
+ },
+ {
+  "id": "779190279",
+  "title": "Feedback for 0.309"
+ },
+ {
+  "id": "790233089",
+  "title": "CPUID SDK usage"
+ },
+ {
+  "id": "839483396",
+  "title": "Gradients"
+ },
+ {
+  "id": "840138756",
+  "title": "Software Color Calibration"
+ },
+ {
+  "id": "841646092",
+  "title": "Video samples"
+ },
+ {
+  "id": "850034689",
+  "title": "Motherboard sensors"
+ },
+ {
+  "id": "854818821",
+  "title": "LED Calibration"
+ },
+ {
+  "id": "865697793",
+  "title": "Feedback for 0.310"
+ },
+ {
+  "id": "876675090",
+  "title": "Translations"
+ },
+ {
+  "id": "880541714",
+  "title": "P1 Testing Tool SRD"
+ },
+ {
+  "id": "891256833",
+  "title": "Lighting Studio (LS) SRD"
+ },
+ {
+  "id": "892043272",
+  "title": "User Guide. Light Wings PRO IO"
+ },
+ {
+  "id": "892600321",
+  "title": "Dark Loop (W2) - FW Spec (FRD)"
+ },
+ {
+  "id": "898269195",
+  "title": "IO Controller Pro (BC - Big Controller) - FW Spec (FRD)"
+ },
+ {
+  "id": "925007876",
+  "title": "Driver vs SDK"
+ },
+ {
+  "id": "928350217",
+  "title": "Feedback for 0.311.1"
+ },
+ {
+  "id": "934936577",
+  "title": "F1 Test Tool v1.0.0"
+ },
+ {
+  "id": "935624705",
+  "title": "Hardware fans controls"
+ },
+ {
+  "id": "939720706",
+  "title": "LEDs calibration"
+ },
+ {
+  "id": "941096977",
+  "title": "Production test tool. F1"
+ },
+ {
+  "id": "968982534",
+  "title": "Production test tool . P1"
+ },
+ {
+  "id": "982646785",
+  "title": "Feedback for 0.312.0"
+ },
+ {
+  "id": "1012400135",
+  "title": "Feedback for 0.312.2"
+ },
+ {
+  "id": "1014988822",
+  "title": "QUICK TAP (QT) feature"
+ },
+ {
+  "id": "1023934466",
+  "title": "IO Center Versions"
+ },
+ {
+  "id": "1032617996",
+  "title": "Video Codecs used in IO Center desktop app (Windows Media Foundation)"
+ },
+ {
+  "id": "1035337733",
+  "title": "Gradient editor"
+ },
+ {
+  "id": "1042808838",
+  "title": "GROUP tabs F1"
+ },
+ {
+  "id": "1044086785",
+  "title": "GROUP tabs K3"
+ },
+ {
+  "id": "1056768006",
+  "title": "Feedback for 0.313.3 (Computex build)"
+ },
+ {
+  "id": "1061945347",
+  "title": "Lighting effects"
+ },
+ {
+  "id": "1062010917",
+  "title": "Codecs comparison"
+ },
+ {
+  "id": "1066008577",
+  "title": "Ripple effect"
+ },
+ {
+  "id": "1066041352",
+  "title": "General keyboard lightnings"
+ },
+ {
+  "id": "1066041360",
+  "title": "Custom keyboard lightnings"
+ },
+ {
+  "id": "1066106881",
+  "title": "Lightnings"
+ },
+ {
+  "id": "1066139650",
+  "title": "LS & DL keyboard lightnings"
+ },
+ {
+  "id": "1066139658",
+  "title": "Remap keyboard"
+ },
+ {
+  "id": "1066467343",
+  "title": "Fn bindings"
+ },
+ {
+  "id": "1066631172",
+  "title": "Product settings for keyboards"
+ },
+ {
+  "id": "1067057154",
+  "title": "MACRO bindings for keyboards"
+ },
+ {
+  "id": "1074135042",
+  "title": "Light Loop IO LCD Tutorials"
+ },
+ {
+  "id": "1074364426",
+  "title": "Cooling Studio Tutorials"
+ },
+ {
+  "id": "1074954247",
+  "title": "Cooling F1"
+ },
+ {
+  "id": "1094484012",
+  "title": "LS design materials"
+ },
+ {
+  "id": "1105395713",
+  "title": "Feedback for 0.313.5"
+ },
+ {
+  "id": "1114210305",
+  "title": "Keyboards settings for multiple devices"
+ },
+ {
+  "id": "1114243078",
+  "title": "Mice settings for multiple devices"
+ },
+ {
+  "id": "1142063111",
+  "title": "GIF to MJPEG"
+ },
+ {
+  "id": "1152942083",
+  "title": "Production test tool. A1"
+ },
+ {
+  "id": "1154351105",
+  "title": "User Guide. Dark Rock 6 PRO IO LCD"
+ },
+ {
+  "id": "1157136389",
+  "title": "Product settings F1"
+ },
+ {
+  "id": "1157922817",
+  "title": "Illumination F1"
+ },
+ {
+  "id": "1162641418",
+  "title": "Hiding/replacing inactive devices on HM tile"
+ },
+ {
+  "id": "1165950978",
+  "title": "P1 / Dark Power Pro 14 IO feedback"
+ },
+ {
+  "id": "1165951199",
+  "title": "K3 / Light Mount TKL feedback"
+ },
+ {
+  "id": "1167097858",
+  "title": "General IO Center desktop feedback"
+ },
+ {
+  "id": "1169391626",
+  "title": "Cost & Consumption Calculations Clarifications - P1 (Dark Power Pro 14 IO)"
+ },
+ {
+  "id": "1176141840",
+  "title": "Untitled live doc 2026-07-15"
+ },
+ {
+  "id": "1179910148",
+  "title": "Session Management feedback"
+ }
+]

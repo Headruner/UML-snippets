@@ -1,0 +1,60 @@
+@startuml Confluence-to-Markdown Export Pipeline
+!theme plain
+skinparam componentStyle rectangle
+skinparam defaultTextAlignment center
+
+actor Analyst
+
+package "Exporter" {
+  component "Driver\n(export.py / Program.cs)" as Driver
+  component "REST Client\n(storage fetch,\ncursor pagination)" as Client
+  component "Markdown Converter\n(HTML+ node policy)" as Conv
+}
+
+cloud "Confluence Cloud\nREST API" as API
+database "Local filesystem\noutput/" as FS
+
+Analyst --> Driver : run(space=LDP3, --set, --images)
+
+Driver --> Client : enumerate space
+Client --> API : GET /content?spaceKey&limit=100
+API --> Client : results + _links.next (cursor)
+Client --> Driver : PageRef[] (id, title)
+
+loop each page
+  Driver --> Client : fetch page body
+  Client --> API : GET /content/{id}?expand=body.storage,version,ancestors
+  API --> Client : storage XHTML (unrendered, fast)
+  Client --> Driver : ConfluencePage
+  Driver --> Conv : convert(page)
+  Conv --> Driver : markdown + image[] filenames
+  Driver --> FS : write pages/<slug>.md
+
+  alt --images and attachments present
+    Driver --> Client : list + download attachments
+    Client --> API : GET /content/{id}/child/attachment ; GET download
+    API --> Client : binary
+    Client --> Driver : bytes
+    Driver --> FS : write assets/<filename>
+  end
+
+  Driver --> FS : append meta/manifest.csv, meta/images.csv
+end
+
+Driver --> Analyst : summary (n pages, m images, failures)
+
+note right of Client
+  Use body.storage, NOT body.view / export-word.
+  Rendered endpoints re-expand macros server-side
+  and can hang >300s on heavy pages.
+end note
+
+note bottom of Conv
+  Node policy:
+  headings / lists / tables / links / code
+  media -> ![file](assets/file) (+ manifest)
+  status -> `[COLOR]`   checkbox -> [x]/[ ]
+  mention -> @Name      time -> ISO date
+  toc / anchor / change-history -> dropped
+end note
+@enduml

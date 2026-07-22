@@ -1,0 +1,20 @@
+# Confluence -> Markdown export configuration
+# Auth is via environment variables, NOT this file:
+#   export ATLASSIAN_EMAIL="you@company.com"
+#   export ATLASSIAN_TOKEN="your-api-token"
+
+base_url: https://bequiet.atlassian.net   # site root (no trailing /wiki)
+space_key: LDP3                           # the space to export
+output_dir: output                        # created next to export.py
+
+# Body format is fixed in code to 'storage' — do NOT switch to rendered/view,
+# it re-expands macros server-side and can time out on heavy pages.
+
+# Macro handling policy is implemented in convert.py:
+#   change-history / version-history -> dropped (noted as a blockquote)
+#   toc / anchor                     -> dropped (navigation only)
+#   status badges                    -> `[COLOR]` inline code
+#   task-list checkboxes             -> [x] / [ ]
+#   mentions                         -> kept as @Name text
+#   code macro / <pre>               -> fenced ``` block
+#   images (media / media-inline)    -> ![filename](assets/filename) + images.csv row
